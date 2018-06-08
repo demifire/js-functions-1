@@ -4,6 +4,9 @@
  * @return {string} the number as a string
  */
 
+function numberToString(num){
+    return num + "";
+}
 
 /**
  * Adds one to a given number.
@@ -11,6 +14,9 @@
  * @return {number}
  */
 
+ function increase(n){
+     return n+1;
+ }
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +24,9 @@
  * @return {number}
  */
 
+ function decrease(n){
+    return n-1;
+ }
 
 /**
  * Adds two numbers.
@@ -26,6 +35,9 @@
  * @return {number} the sum
  */
 
+ function add(x, y){
+     return x+y;
+ }
 
 /**
  * Subtracts the second number from the first.
@@ -34,6 +46,9 @@
  * @return {number} the difference
  */
 
+ function subtract(x, y){
+     return x-y;
+ }
 
 /**
  * Multiplies two numbers.
@@ -42,6 +57,9 @@
  * @return {number} the product
  */
 
+function multiply(x,y){
+    return x*y;
+}
 
 /**
  * Divides the first number by the second.
@@ -50,6 +68,9 @@
  * @return {number} the quotient
  */
 
+ function divide(x, y){
+     return x/y;
+ }
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +78,9 @@
  * @return {number} squared
  */
 
+function square (x) {
+    return x*x;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -67,6 +91,24 @@
  * @return {number} the result
  */
 
+function calculate(operation, x, y){
+if (operation === 'add'){
+    var result = x+y;
+    console.log(x + ' + ' + y + ' = ' + result);
+    return result}
+else if (operation === 'subtract'){
+    var result = x-y;
+    console.log(x + ' - ' + y + ' = ' + result);
+    return result}
+else if (operation === 'multiply'){
+    var result = x*y;
+    console.log(x + ' * ' + y + ' = ' + result);
+    return result}
+else if (operation === 'divide'){
+    var result = x/y;
+    console.log(x + ' / ' + y + ' = ' + result);
+    return result}
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -75,6 +117,9 @@
  * @return {boolean} `a` is larger than `b`
  */
 
+ function isGreaterThan(a, b){
+     if(a>b){return true}else{return false}
+ }
 
 /**
  * Returns true if `a` is less than `b`.
@@ -83,6 +128,9 @@
  * @return {boolean} `a` is smaller than `b`
  */
 
+ function isLessThan(a, b){
+     if(a<b){return true}else{return false}
+ }
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -91,6 +139,9 @@
  * @return {boolean} the numbers are equal
  */
 
+function areEqual(a, b){
+    if(a===b){return true}else{return false}
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -99,6 +150,9 @@
  * @return {number} the smallest number
  */
 
+ function minimum(x, y){
+     if (x<y){return x}else{return y}
+ }
 
 /**
  * Returns the largest value of two numbers.
@@ -107,6 +161,9 @@
  * @return {number} the largest number
  */
 
+function maximum(x, y){
+    if (x>y){return x}else{return y}
+}
 
 /**
  * Returns true if `n` is even.
@@ -114,6 +171,9 @@
  * @return {boolean} the number is even
  */
 
+function isEven(n){
+    if(n%2===0){return true}else{return false}
+}
 
 /**
  * Returns true if `n` is odd.
@@ -121,6 +181,9 @@
  * @return {boolean} the number is odd
  */
 
+function isOdd(n){
+    if(n%2!==0){return true}else{return false}
+}
 
 /**
  * Returns a letter grade.
@@ -134,6 +197,14 @@
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade(score, total){
+    var actualScore = score/total*100;
+    if(actualScore>=90 && actualScore<100){return 'A'}
+    else if(actualScore>=80 && actualScore<90){return 'B'}
+    else if(actualScore>=70 && actualScore <80){return 'C'}
+    else if(actualScore>=60 && actualScore < 70){return 'D'}
+    else if(actualScore <60){return 'F'}
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -143,6 +214,10 @@
  * @return {object} restaurant
  */
 
+function incrementReviews(restaurant){
+    if(restaurant.reviews !== undefined){restaurant.reviews++}else{restaurant.reviews=1};
+    return restaurant;
+}
 
 /**
  * Joins two strings with a space.
@@ -151,6 +226,9 @@
  * @return {string} joined the words joined with a space
  */
 
+function combine(word1, word2){
+    return word1 + ' ' + word2;
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -160,3 +238,9 @@
  * @return {object} circle
  */
 
+ function createCircle(radius){
+     var circle = {};
+     circle.circumference = 2 * Math.PI * radius;
+     circle.area = Math.PI*(radius*radius);
+     return circle
+ }
